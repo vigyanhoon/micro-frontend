@@ -56,5 +56,13 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "stream": "0.0.2",
+    "systemjs": "^6.7.1",
+    "url": "^0.11.0",
+    "zlib": "^1.0.5"
   }
 }

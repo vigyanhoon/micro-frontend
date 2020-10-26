@@ -7,6 +7,7 @@
   <title>EmberQuickstart</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';"> -->
 
   {{content-for "head"}}
 
@@ -26,7 +27,7 @@
     }
   </script>
   <!-- <script src="https://unpkg.com/import-map-overrides@1.15.1/dist/import-map-overrides.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/system.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/systemjs@6.7.1/dist/system.js"></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/amd.min.js"></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-exports.js"></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-register.min.js"></script> -->
@@ -40,16 +41,7 @@
 
   {{content-for "body-footer"}}
   <script>
-    Promise.all([System.import('single-spa'), System.import('react'), System.import('react-dom')])
-      .then(([singleSpa]) => {
-        singleSpa.registerApplication({
-          name: 'sample-react',
-          app: () => System.import('@example/react-app'),
-          activeWhen: "/"
-        });
-
-        singleSpa.start();
-      });
+    
   </script>
   <!-- <import-map-overrides-full></import-map-overrides-full> -->
 </body>
