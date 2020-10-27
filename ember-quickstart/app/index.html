@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>EmberQuickstart</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';"> -->
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>EmberQuickstart</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';"> -->
+    {{content-for "head"}}
 
-  {{content-for "head"}}
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css" />
+    <link
+      integrity=""
+      rel="stylesheet"
+      href="{{rootURL}}assets/ember-quickstart.css"
+    />
 
-  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/ember-quickstart.css">
-
-  {{content-for "head-footer"}}
-  <meta name="importmap-type" content="systemjs-importmap" />
+    {{content-for "head-footer"}}
+    <!-- <meta name="importmap-type" content="systemjs-importmap" />
   <script type="systemjs-importmap">
     {
       "imports": {
-        "react": "https://cdn.jsdelivr.net/npm/@esm-bundle/react@16.14.0/system/react.development.js",
-        "react-dom": "https://cdn.jsdelivr.net/npm/@esm-bundle/react-dom@16.14.0/system/react-dom.development.js",
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.8.0/lib/system/single-spa.dev.js",
         "@example/react-app": "//localhost:3000/example-react-app.js"
       }
     }
-  </script>
-  <!-- <script src="https://unpkg.com/import-map-overrides@1.15.1/dist/import-map-overrides.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/systemjs@6.7.1/dist/system.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/amd.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-exports.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-register.min.js"></script> -->
-</head>
+  </script> -->
+    <!-- <script src="https://unpkg.com/import-map-overrides@1.15.1/dist/import-map-overrides.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/systemjs@6.7.1/dist/system.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/amd.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-exports.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-register.min.js"></script> -->
+  </head>
 
-<body>
-  {{content-for "body"}}
+  <body>
+    {{content-for "body"}}
 
-  <script src="{{rootURL}}assets/vendor.js"></script>
-  <script src="{{rootURL}}assets/ember-quickstart.js"></script>
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/ember-quickstart.js"></script>
 
-  {{content-for "body-footer"}}
-  <script>
-    
-  </script>
-  <!-- <import-map-overrides-full></import-map-overrides-full> -->
-</body>
-
+    {{content-for "body-footer"}}
+    <script></script>
+    <!-- <import-map-overrides-full></import-map-overrides-full> -->
+  </body>
 </html>
