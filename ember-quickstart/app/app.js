@@ -14,7 +14,9 @@ loadInitializers(App, config.modulePrefix);
 const addScript = (path, cb) => {
   const script = document.createElement("script");
   script.src = path;
+  script.type = "module";
   script.onload = cb;
+  script.id = "root-config";
   document.head.appendChild(script);
 };
 
@@ -51,3 +53,16 @@ addScript("https://cdn.jsdelivr.net/npm/systemjs@6.7.1/dist/system.js", () => {
     singleSpa.start();
   });
 });
+
+addScript("http://localhost:8080/root-config.js", (event) => {
+  console.log(event);
+});
+
+addScript(
+  "https://cdn.jsdelivr.net/npm/systemjs@6.7.1/dist/system.js",
+  (event) => {
+    System.import("http://localhost:8080/root-config.js").then((module) => {
+      module.func({ name: "sanjay" });
+    });
+  }
+);
